@@ -1,0 +1,47 @@
+{
+	"name": "@byojs/toggler",
+	"description": "Throttled toggler",
+	"version": "0.1.2",
+	"exports": {
+		"./": "./dist/toggler.mjs"
+	},
+	"browser": {
+		"@byojs/toggler": "./dist/toggler.mjs"
+	},
+	"scripts": {
+		"build:all": "node scripts/build-all.js",
+		"build:gh-pages": "npm run build:all && node scripts/build-gh-pages.js",
+		"build": "npm run build:all",
+		"test:start": "npx http-server test/ -p 8080",
+		"test": "npm run test:start",
+		"postinstall": "node scripts/postinstall.js",
+		"prepublishOnly": "npm run build:all"
+	},
+	"dependencies": {
+		"@byojs/scheduler": "~0.9.2"
+	},
+	"devDependencies": {
+		"micromatch": "~4.0.8",
+		"recursive-readdir-sync": "~1.0.6",
+		"terser": "~5.31.6"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/byojs/toggler.git"
+	},
+	"keywords": [
+		"debounce",
+		"throttle",
+		"toggle",
+		"scheduling",
+		"task",
+		"async"
+	],
+	"bugs": {
+		"url": "https://github.com/byojs/toggler/issues",
+		"email": "getify@gmail.com"
+	},
+	"homepage": "https://github.com/byojs/toggler",
+	"author": "Kyle Simpson <getify@gmail.com>",
+	"license": "MIT"
+}

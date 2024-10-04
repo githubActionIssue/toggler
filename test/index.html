@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Toggler: Tests</title>
+</head>
+<body>
+
+<main>
+<h1>Toggler: Tests</h1>
+
+<h3><a href="https://github.com/byojs/toggler">Github</a></h3>
+
+<hr>
+
+<p>
+	<button type="button" id="run-tests-btn">run tests</button>
+</p>
+
+<div id="test-results"></div>
+
+</main>
+
+<!-------------------------->
+
+<script type="importmap">
+{
+	"imports": {
+		"toggler/src": "./src/toggler.js",
+		"toggler/dist": "./dist/toggler.mjs",
+
+		"@byojs/scheduler": "./dist/external/@byojs/scheduler/scheduler.mjs"
+	}
+}
+</script>
+<script type="module" src="./test.js"></script>
+
+</body>
+</html>
